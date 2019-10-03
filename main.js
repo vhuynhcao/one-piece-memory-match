@@ -3,7 +3,7 @@ $(document).ready(initializeApp);
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
-var max_matches = 2;
+var max_matches = 9;
 
 function initializeApp(){
   $('.card').click(handleCardClick);
@@ -44,4 +44,8 @@ function handleCardClick(event){
 
 function toggleModal(){
   $('.endModal').removeClass('hidden');
+  $('.closeBtn').click(function(){
+    $('.endModal').addClass('hidden');
+    $('main, .header').css('opacity', '1');
+  });
 }
