@@ -142,6 +142,10 @@ p {
   background-image: url(images/zoro.png);
 }
 
+.found {
+  background-image: url(images/found.png);
+}
+
 .hidden{
   display: none;
 }

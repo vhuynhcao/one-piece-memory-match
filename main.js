@@ -4,9 +4,12 @@ var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
 var max_matches = 9;
+var attempts = null;
+var games_played = 0;
 
 function initializeApp(){
   $('.card').click(handleCardClick);
+  displayStats();
 }
 
 function hideCard() {
@@ -39,6 +42,8 @@ function handleCardClick(event){
     } else {
         setTimeout(hideCard, 1500);
     }
+    attempts++;
+    displayStats();
   }
 }
 
@@ -48,4 +53,18 @@ function toggleModal(){
     $('.endModal').addClass('hidden');
     $('main, .header').css('opacity', '1');
   });
+  games_played++;
+}
+
+function calculateAccuracy(){
+  var calcAccr = matches / attempts;
+  return calcAccr;
+}
+
+function displayStats(){
+  $('.gamesPlayed').text(games_played);
+  $('.attempts').text(attempts);
+
+  var accuracyPercent = Math.floor(calculateAccuracy()*100) + '%';
+  $('.accuracy').text(accuracyPercent);
 }
