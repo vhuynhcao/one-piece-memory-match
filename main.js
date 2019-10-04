@@ -71,6 +71,7 @@ function resetStats(){
   $('.back').removeClass('hidden');
   $('.cardFace').removeClass('matchedCards');
   $('.card').removeClass('noClick');
+  $('.found').addClass('hidden');
 }
 
 function toggleModal(){
