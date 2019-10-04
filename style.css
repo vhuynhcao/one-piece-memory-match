@@ -55,11 +55,9 @@ p {
 .card {
   height: 100%;
   width: 40%;
-  border: 1px solid black;
   position: relative;
   margin-left: 3%;
   margin-right: 2%;
-  border-radius: 10px;
 }
 
 .cardFace {
@@ -69,6 +67,23 @@ p {
   position: absolute;
   background-position: center;
   border-radius: 10px;
+
+}
+
+.matchedCards{
+  animation: flip 4s linear infinite;
+}
+
+@keyframes flip{
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(-1,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
 }
 
 .endModal {
@@ -148,4 +163,8 @@ p {
 
 .hidden{
   display: none;
+}
+
+.noClick {
+  pointer-events: none;
 }
