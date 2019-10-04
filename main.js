@@ -10,6 +10,8 @@ var games_played = 0;
 function initializeApp(){
   $('.card').click(handleCardClick);
   displayStats();
+  $('.attempts').text('0');
+  $('.accuracy').text('0%');
 }
 
 function hideCard() {
@@ -47,6 +49,13 @@ function handleCardClick(event){
   }
 }
 
+function resetStats(){
+  matches = null;
+  attempts = null;
+  $('.attempts').text('0');
+  $('.accuracy').text('0%');
+}
+
 function toggleModal(){
   $('.endModal').removeClass('hidden');
   $('.closeBtn').click(function(){
@@ -54,6 +63,7 @@ function toggleModal(){
     $('main, .header').css('opacity', '1');
   });
   games_played++;
+  resetStats();
 }
 
 function calculateAccuracy(){
