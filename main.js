@@ -29,6 +29,10 @@ function allCardsMatched(){
 }
 
 function handleCardClick(event){
+  if(firstCardClicked !== null && secondCardClicked !== null){
+    return;
+  }
+
   $(event.currentTarget).find('.back').addClass('hidden');
 
   if(firstCardClicked === null){
@@ -56,14 +60,16 @@ function resetStats(){
   $('.accuracy').text('0%');
 }
 
+function redirectLv2(){
+  $('.endModal').addClass('hidden');
+  window.location = 'level2.html';
+}
+
 function toggleModal(){
   $('.endModal').removeClass('hidden');
-  $('.closeBtn').click(function(){
-    $('.endModal').addClass('hidden');
-    $('main, .header').css('opacity', '1');
-  });
   games_played++;
   resetStats();
+  setTimeout(redirectLv2, 3000);
 }
 
 function calculateAccuracy(){
