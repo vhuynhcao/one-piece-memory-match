@@ -1,127 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>How Good is Your Memory?</title>
+  <title>Find the Straw Hat Pirates!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="main.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">Find all the Straw Hat Pirates</div>
+  <video autoplay muted loop id="myVideo">
+    <source src="images/ocean_bg.mp4" type="video/mp4">
+  </video>
+  <div class="header"></div>
   <main>
     <aside class="leftData">
-      <p>GAME STATS</p>
-      <div class="statsInfo">Attempts</div>
-      <div class="statsInfo attempts"></div>
-      <div class="statsInfo">Accuracy</div>
-      <div class="statsInfo accuracy"></div>
-      <div class="statsInfo">Games Played</div>
-      <div class="statsInfo gamesPlayed"></div>
+      <div class="stats_title"></div>
+      <div class="statsInfo attempt_bg">
+        <div class="attempts"></div>
+      </div>
+      <div class="statsInfo accr_bg">
+        <div class="accuracy"></div>
+      </div>
+      <div class="statsInfo played_bg">
+        <div class="gamesPlayed">0</div>
+      </div>
     </aside>
     <div class="rightGame">
       <div class="row">
         <div class="card">
           <div class="cardFace front luffy"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front robin"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front nami"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front chopper"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front luffy"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front franky"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
       </div>
       <div class="row">
         <div class="card">
           <div class="cardFace front zoro"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front sanji"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front usopp"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front robin"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front brook"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front zoro"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
       </div>
       <div class="row">
         <div class="card">
           <div class="cardFace front chopper"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front franky"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front nami"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front brook"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front usopp"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
         <div class="card">
           <div class="cardFace front sanji"></div>
           <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+          <div class="cardFace back hvr-ripple-out"></div>
         </div>
       </div>
     </div>
   </main>
   <div class="endModal hidden">
     <div class="modal_content">
-      <p class="modalText">Congratulations! You have found them all!</p>
     </div>
-    <button class="closeBtn">Press to close</button>
+    <button class="closeBtn">Restart Your Adventure!</button>
   </div>
 </body>
 </html>
