@@ -13,6 +13,13 @@ function initializeApp(){
   displayStats();
   $('.attempts').text('0');
   $('.accuracy').text('0%');
+  $(function () {
+    var parent = $(".rightGame");
+    var divs = parent.children();
+    while (divs.length) {
+      parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+  });
 }
 
 function hideCard() {
@@ -80,6 +87,13 @@ function toggleModal(){
     $('.endModal').addClass('hidden');
     $('main, .header').css('opacity', '1');
     resetStats();
+    $(function () {
+      var parent = $(".rightGame");
+      var divs = parent.children();
+      while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+      }
+    });
   });
   games_played++;
   $('.gamesPlayed').text(games_played);
@@ -87,6 +101,9 @@ function toggleModal(){
 
 function calculateAccuracy(){
   calcAccuracy = (matches / attempts) * 100;
+  if(isNaN(calcAccuracy)){
+    calcAccuracy = 0;
+  }
   return calcAccuracy;
 }
 
