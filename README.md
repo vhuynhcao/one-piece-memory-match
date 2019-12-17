@@ -12,7 +12,7 @@ A themed JavaScript memory match game.
 ---
 ## Live Demo
 
-Live link to come soon
+[Live](http://memorymatch.vn-codes.com/)
 
 ---
 ## Features
