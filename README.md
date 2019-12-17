@@ -27,7 +27,7 @@ Live link to come soon
 ## Development
 
 #### Getting Started
-Clone the repository.
+* Clone the repository.
     ```
     git clone https://github.com/vhuynhcao/one-piece-memory-match
     cd one-piece-memory-match
