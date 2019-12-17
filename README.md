@@ -1,6 +1,7 @@
 # One Piece Memory Match
 
 A themed JavaScript memory match game.
+
 ---
 ## Technologies Used
 
@@ -12,6 +13,7 @@ A themed JavaScript memory match game.
 ## Live Demo
 
 Live link to come soon
+
 ---
 ## Features
 
