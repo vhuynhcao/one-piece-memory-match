@@ -9,12 +9,12 @@ var games_played = 0;
 var calcAccuracy = null;
 
 function initializeApp(){
-  $('.card').click(handleCardClick);
+  $('.card-container').click(handleCardClick);
   displayStats();
   $('.attempts').text('0');
   $('.accuracy').text('0%');
   $(function () {
-    var parent = $(".rightGame");
+    var parent = $(".right-game");
     var divs = parent.children();
     while (divs.length) {
       parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
@@ -45,25 +45,24 @@ function handleCardClick(event){
 
   if(firstCardClicked === null){
     firstCardClicked = $(event.currentTarget);
-    firstCardClicked.addClass('noClick');
+    firstCardClicked.addClass('no-click');
   } else {
     secondCardClicked = $(event.currentTarget);
-    secondCardClicked.addClass('noClick');
+    secondCardClicked.addClass('no-click');
     if (firstCardClicked.find('.front').css('background-image') === secondCardClicked.find('.front').css('background-image')) {
       matches++;
       firstCardClicked.find('.found').removeClass('hidden');
       secondCardClicked.find('.found').removeClass('hidden');
-      firstCardClicked.find('.cardFace').addClass('matchedCards');
-      secondCardClicked.find('.cardFace').addClass('matchedCards');
+      firstCardClicked.find('.card-face').addClass('matchedCards');
+      secondCardClicked.find('.card-face').addClass('matchedCards');
 
       allCardsMatched();
       firstCardClicked = null;
       secondCardClicked = null;
-      console.log('card matches');
     } else {
       setTimeout(hideCard, 1000);
-      firstCardClicked.removeClass('noClick');
-      secondCardClicked.removeClass('noClick');
+      firstCardClicked.removeClass('no-click');
+      secondCardClicked.removeClass('no-click');
     }
     displayStats();
     attempts++;
@@ -76,19 +75,19 @@ function resetStats(){
   $('.attempts').text('0');
   $('.accuracy').text('0%');
   $('.back').removeClass('hidden');
-  $('.cardFace').removeClass('matchedCards');
-  $('.card').removeClass('noClick');
+  $('.card-face').removeClass('matched-cards');
+  $('.card-container').removeClass('no-click');
   $('.found').addClass('hidden');
 }
 
 function toggleModal(){
-  $('.endModal').removeClass('hidden');
-  $('.closeBtn').click(function(){
-    $('.endModal').addClass('hidden');
+  $('.end-modal').removeClass('hidden');
+  $('.close-btn').click(function(){
+    $('.end-modal').addClass('hidden');
     $('main, .header').css('opacity', '1');
     resetStats();
     $(function () {
-      var parent = $(".rightGame");
+      var parent = $(".right-game");
       var divs = parent.children();
       while (divs.length) {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
@@ -96,7 +95,7 @@ function toggleModal(){
     });
   });
   games_played++;
-  $('.gamesPlayed').text(games_played);
+  $('.games-played').text(games_played);
 }
 
 function calculateAccuracy(){
