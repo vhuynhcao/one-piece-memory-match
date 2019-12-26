@@ -94,12 +94,11 @@ main{
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, .5);
+  align-items: center;
 }
 
 .modal-background{
   position: absolute;
-  left: 19%;
-  top: 25%;
   contain: content;
   width: 60%;
   height: 50%;
@@ -175,14 +174,13 @@ main{
 
 @media (min-width: 300px) and (max-width: 600px){
   .modal-background {
-    left: 2%;
-    width: 95%;
-    height: 26%;
+    width: 90%;
+    height: 33%;
   }
 
   .close-btn {
     left: 33%;
-    top: 31%;
+    top: 41%;
     font-size: 1rem;
   }
 }
@@ -207,14 +205,12 @@ main{
   }
 
   .modal-background {
-    left: 7%;
-    top: 23%;
     width: 86%;
     height: 43%;
   }
 
   .close-btn {
-    top: 33%;
+    top: 38%;
     left: 36%;
     font-size: 1.5rem;
   }
@@ -222,12 +218,12 @@ main{
 
 @media (min-width: 1025px) and (max-width: 1350px){
   .modal-background {
-    top: 27%;
     height: 42%;
   }
 
   .close-btn {
-    left: 41%;
+    left: 42%;
+    top: 39%;
   }
 }
 
@@ -245,8 +241,6 @@ main{
   }
 
   .modal-background {
-    left: 7%;
-    top: 15%;
     width: 86%;
     height: 75%;
   }
