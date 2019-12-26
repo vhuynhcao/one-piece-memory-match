@@ -173,12 +173,26 @@ main{
   pointer-events: none;
 }
 
-@media (max-width: 1024px){
+@media (min-width: 300px) and (max-width: 600px){
+  .modal-background {
+    left: 2%;
+    width: 95%;
+    height: 26%;
+  }
+
+  .close-btn {
+    left: 33%;
+    top: 31%;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
   .stats-text,
   .attempts,
   .accuracy,
   .games-played {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .card-row {
@@ -193,20 +207,31 @@ main{
   }
 
   .modal-background {
-    left: 19%;
-    top: 25%;
-    width: 60%;
-    height: 50%;
+    left: 7%;
+    top: 23%;
+    width: 86%;
+    height: 43%;
   }
 
   .close-btn {
-    top: 36%;
-    left: 43%;
+    top: 33%;
+    left: 36%;
+    font-size: 1.5rem;
   }
 }
 
-@media (max-height: 768px) {
+@media (min-width: 1025px) and (max-width: 1350px){
+  .modal-background {
+    top: 27%;
+    height: 42%;
+  }
 
+  .close-btn {
+    left: 41%;
+  }
+}
+
+@media (max-height: 850px) {
   .stats-text,
   .attempts,
   .accuracy,
@@ -220,14 +245,15 @@ main{
   }
 
   .modal-background {
-    left: 19%;
-    top: 25%;
-    width: 60%;
-    height: 50%;
+    left: 7%;
+    top: 15%;
+    width: 86%;
+    height: 75%;
   }
 
   .close-btn {
-    top: 36%;
-    left: 43%;
+    top: 33%;
+    left: 36%;
+    font-size: 1.5rem;
   }
 }
