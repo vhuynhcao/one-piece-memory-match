@@ -89,32 +89,34 @@ main{
 .end-modal {
   position: fixed;
   z-index: 1;
-  left: 25%;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.modal-background{
+  position: absolute;
+  left: 19%;
   top: 25%;
-  width: 964px;
-  height: 380px;
+  contain: content;
+  width: 60%;
+  height: 50%;
   overflow: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-image: url(images/modal_bg.png);
-  background-position: center;
-  background-size: cover;
 }
 
 .close-btn {
   text-align: center;
   position: absolute;
-  top: 25%;
-  left: 45%;
+  top: 36%;
+  left: 43%;
   cursor: pointer;
   background-color: azure;
   border: 1px solid black;
   border-radius: 4px;
-}
-
-.modal-text {
-  text-align: center;
-  font-size: 30px;
 }
 
 .back {
@@ -171,24 +173,6 @@ main{
   pointer-events: none;
 }
 
-@media (max-width: 600px) {
-  .stats-text,
-  .attempts,
-  .accuracy,
-  .games-played {
-    font-size: .9rem;
-  }
-
-  .card-row{
-    flex-wrap: wrap;
-  }
-
-  .card-container {
-    height: 48%;
-    width: 28%;
-  }
-}
-
 @media (max-width: 1024px){
   .stats-text,
   .attempts,
@@ -207,6 +191,18 @@ main{
     height: 48%;
     width: 22%;
   }
+
+  .modal-background {
+    left: 19%;
+    top: 25%;
+    width: 60%;
+    height: 50%;
+  }
+
+  .close-btn {
+    top: 36%;
+    left: 43%;
+  }
 }
 
 @media (max-height: 768px) {
@@ -221,5 +217,17 @@ main{
   .card-container {
     height: 80%;
     width: 11%;
+  }
+
+  .modal-background {
+    left: 19%;
+    top: 25%;
+    width: 60%;
+    height: 50%;
+  }
+
+  .close-btn {
+    top: 36%;
+    left: 43%;
   }
 }
