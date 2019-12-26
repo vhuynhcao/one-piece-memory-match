@@ -40,12 +40,15 @@ main{
 }
 
 .right-game {
-  width: 90%;
+  width: 100%;
+  margin-left: 18%;
 }
 
-.column {
-  width: 100%;
+.card-row {
+  width: 75%;
   height: 25%;
+  display: flex;
+  flex-direction: row;
 }
 
 .card-container {
@@ -54,42 +57,13 @@ main{
   position: relative;
   margin-left: 3%;
   margin-right: 2%;
-  margin-top: 5px;
-}
-
-@media screen and (max-width: 600px){
-  .stats-text,
-  .attempts,
-  .accuracy,
-  .games-played {
-    font-size: .9rem;
-  }
-
-  .card-container{
-    height: 92%;
-    width: 140%;
-  }
-}
-
-@media screen and (max-height: 600px) {
-  .stats-text,
-  .attempts,
-  .accuracy,
-  .games-played {
-    font-size: .9rem;
-  }
-
-  .card-container {
-    height: 92%;
-    width: 140%;
-  }
 }
 
 .card-face {
   height: 100%;
   width: 100%;
-  background-size: cover;
   position: absolute;
+  background-size: cover;
   background-position: center;
   border-radius: 10px;
 }
@@ -187,6 +161,8 @@ main{
 
 .found {
   background-image: url(images/found.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .hidden{
@@ -195,4 +171,23 @@ main{
 
 .no-click {
   pointer-events: none;
+}
+
+@media (max-width: 600px),
+(max-height: 600px) {
+  .stats-text,
+  .attempts,
+  .accuracy,
+  .games-played {
+    font-size: .9rem;
+  }
+
+  .card-row{
+    flex-wrap: wrap;
+  }
+
+  .card-container {
+    height: 48%;
+    width: 28%;
+  }
 }
