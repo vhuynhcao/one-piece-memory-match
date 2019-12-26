@@ -4,130 +4,142 @@
   <title>Find the Straw Hat Pirates!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="main.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="gradient_overlay"></div>
-  <video autoplay muted loop id="myVideo">
-    <source src="images/ocean_bg.mp4" type="video/mp4">
-  </video>
-  <div class="header"></div>
-  <main>
-    <aside class="leftData">
-      <div class="stats_title"></div>
-      <div class="statsInfo attempt_bg">
-        <div class="attempts"></div>
-      </div>
-      <div class="statsInfo accr_bg">
-        <div class="accuracy"></div>
-      </div>
-      <div class="statsInfo played_bg">
-        <div class="gamesPlayed">0</div>
-      </div>
-    </aside>
-    <div class="rightGame">
-      <div class="row">
-        <div class="card">
-          <div class="cardFace front luffy"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+  <div class="d-flex justify-content-center">
+    <img src="images/title_bar.png" class="header mt-4"></img>
+  </div>
+  <div class="left-data d-flex justify-content-around">
+    <div>
+    <div class="stats-text">Attempts:</div>
+    <div class="attempts"></div>
+    </div>
+
+    <div>
+    <div class="stats-text">Accuracy:</div>
+    <div class="accuracy"></div>
+    </div>
+
+    <div>
+    <div class="stats-text">Games Played:</div>
+    <div class="games-played">0</div>
+    </div>
+  </div>
+
+  <main class="justify-content-center mt-2">
+    <div class="right-game d-flex justify-content-around">
+      <div class="column col-2">
+        <div class="card-container">
+          <div class="card-face front luffy"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front robin"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front robin"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front nami"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
-        </div>
-        <div class="card">
-          <div class="cardFace front chopper"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
-        </div>
-        <div class="card">
-          <div class="cardFace front luffy"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
-        </div>
-        <div class="card">
-          <div class="cardFace front franky"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front nami"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="card">
-          <div class="cardFace front zoro"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+      <div class="column col-2">
+        <div class="card-container">
+          <div class="card-face front chopper"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front sanji"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front luffy"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front usopp"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
-        </div>
-        <div class="card">
-          <div class="cardFace front robin"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
-        </div>
-        <div class="card">
-          <div class="cardFace front brook"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
-        </div>
-        <div class="card">
-          <div class="cardFace front zoro"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front franky"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="card">
-          <div class="cardFace front chopper"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+      <div class="column col-2">
+        <div class="card-container">
+          <div class="card-face front zoro"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front franky"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front sanji"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front nami"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front usopp"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front brook"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+      </div>
+      <div class="column col-2">
+        <div class="card-container">
+          <div class="card-face front robin"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front usopp"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front brook"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
-        <div class="card">
-          <div class="cardFace front sanji"></div>
-          <div class="cardFace found hidden"></div>
-          <div class="cardFace back"></div>
+        <div class="card-container">
+          <div class="card-face front zoro"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
+        </div>
+      </div>
+      <div class="column col-2">
+        <div class="card-container">
+          <div class="card-face front chopper"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
+        </div>
+        <div class="card-container">
+          <div class="card-face front franky"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
+        </div>
+        <div class="card-container">
+          <div class="card-face front nami"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
+        </div>
+      </div>
+      <div class="column col-2">
+        <div class="card-container">
+          <div class="card-face front brook"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
+        </div>
+        <div class="card-container">
+          <div class="card-face front usopp"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
+        </div>
+        <div class="card-container">
+          <div class="card-face front sanji"></div>
+          <div class="card-face found hidden"></div>
+          <div class="card-face back"></div>
         </div>
       </div>
     </div>
   </main>
-  <div class="endModal hidden">
-    <div class="modal_content">
+
+  <div class="end-modal hidden">
+    <div class="modal-content">
     </div>
-    <button class="closeBtn">Restart Your Adventure!</button>
+    <button class="close-btn">Restart Your Adventure!</button>
   </div>
 </body>
 </html>
