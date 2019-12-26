@@ -53,8 +53,8 @@ function handleCardClick(event){
       matches++;
       firstCardClicked.find('.found').removeClass('hidden');
       secondCardClicked.find('.found').removeClass('hidden');
-      firstCardClicked.find('.card-face').addClass('matchedCards');
-      secondCardClicked.find('.card-face').addClass('matchedCards');
+      firstCardClicked.find('.card-face').addClass('matched-cards');
+      secondCardClicked.find('.card-face').addClass('matched-cards');
 
       allCardsMatched();
       firstCardClicked = null;
