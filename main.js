@@ -2,11 +2,11 @@ $(document).ready(initializeApp);
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var matches = null;
+var matches = 0;
 var max_matches = 9;
-var attempts = null;
+var attempts = 0;
 var games_played = 0;
-var calcAccuracy = null;
+var calcAccuracy = 0;
 
 function initializeApp(){
   $('.card-container').click(handleCardClick);
@@ -99,7 +99,10 @@ function toggleModal(){
 }
 
 function calculateAccuracy(){
-  calcAccuracy = (matches / attempts) * 100;
+  calcAccuracy = 0;
+  if(attempts >= 1){
+    calcAccuracy = (matches / attempts) * 100;
+  }
   if(isNaN(calcAccuracy)){
     calcAccuracy = 0;
   }

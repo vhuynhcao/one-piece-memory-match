@@ -122,6 +122,7 @@ main{
 
 .back {
   background-image: url(images/onepieceback.png);
+  opacity: .2;
 }
 
 .brook {
