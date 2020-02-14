@@ -22,7 +22,7 @@ A themed JavaScript memory match game.
 ---
 ## Preview
 
-![alt text](https://github.com/vhuynhcao/one-piece-memory-match/blob/master/images/one-piece-demo.gif?raw=true "Memory Match game preview")
+![alt text](https://github.com/vhuynhcao/one-piece-memory-match/blob/master/images/one-piece-demo.gif "Memory Match game preview")
 ---
 ## Development
 
